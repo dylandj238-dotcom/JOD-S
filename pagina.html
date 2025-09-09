@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JODS ENTERPRISE</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: #121212;
+      color: #f4f4f4;
+    }
+    header {
+      background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'), linear-gradient(to right, #ff007f, #ffae00);
+      color: white;
+      padding: 30px;
+      text-shadow: 3px 3px 5px #000;
+      font-family: 'Permanent Marker', cursive;
+    }
+    h1 {
+      margin: 0;
+      font-size: 4rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 30px 0;
+    }
+    .menu-item {
+      background: #222;
+      border: 3px solid #ff007f;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 500px;
+      margin: 15px 0;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .menu-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(255, 0, 127, 0.6);
+    }
+    .menu-item h3 {
+      margin: 0;
+      font-size: 2rem;
+      padding: 20px;
+      background: #ff007f;
+      color: white;
+      cursor: pointer;
+      text-shadow: 2px 2px 4px #000;
+      font-family: 'Permanent Marker', cursive;
+    }
+    .menu-item-content {
+      padding: 20px;
+      display: none;
+      color: #f4f4f4;
+      font-size: 1.2rem;
+    }
+    .menu-item-content p {
+      margin: 0;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    button {
+      font-size: 1.5rem;
+      padding: 15px 30px;
+      margin-top: 15px;
+      cursor: pointer;
+      background: #ffae00;
+      color: #121212;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    button:hover {
+      background: #ff007f;
+      color: white;
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JODS ENTERPRISE</h1>
+  </header>
+
+  <div class="menu">
+    <div class="menu-item">
+      <h3 onclick="toggleMenu(this)">SOBRE NOSOTROS</h3>
+      <div class="menu-item-content">
+        <p>Somos un grupo de estudiantes de la "INSTITUCION EDUCATIVA LA MILAGROSA". Nuestro objetivo es enseñar de manera entretenida para inspirar a las próximas generaciones de "TELECOMUNICADORES".</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <h3 onclick="toggleMenu(this)">APRENDE GRATIS</h3>
+      <div class="menu-item-content">
+        <p>Accede a nuestros cursos gratuitos y aprende sobre telecomunicaciones hoy mismo</p>
+        <a href="videos.html"><button>Videos gratuitos</button></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu(header) {
+      const content = header.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
